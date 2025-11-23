@@ -5,6 +5,7 @@ using MHServerEmu.Gui.Avalonia.Views.Dialogs;
 using MHServerEmu.ServerManagement;
 using System;
 using System.Diagnostics;
+using System.IO;
 using System.Text;
 
 namespace MHServerEmu.Gui.Avalonia.Views
@@ -28,7 +29,13 @@ namespace MHServerEmu.Gui.Avalonia.Views
 
         private async void Initialize()
         {
-            ServerInitializationResult result = _serverManager.Initialize("MHServerEmu");
+            const string ServerDirectory = "MHServerEmu";
+
+            // Create a server directory if it doesn't already exist to make it more obvious where to put the server build for the user.
+            if (Directory.Exists(ServerDirectory) == false)
+                Directory.CreateDirectory(ServerDirectory);
+
+            ServerInitializationResult result = _serverManager.Initialize(ServerDirectory);
             SetServerInstance(_serverManager.CurrentInstance);
 
             if (result != ServerInitializationResult.Success)

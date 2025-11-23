@@ -24,9 +24,11 @@ Graphical user interface implementation for [MHServerEmu](https://github.com/Cry
 
 1. Download the latest release [here](https://github.com/Crypto137/MHServerEmu/releases) and extract it.
 
-2. Create a new subdirectory named `MHServerEmu` in the GUI directory and copy or move a build of MHServerEmu to it.
+2. Create a new subdirectory named `MHServerEmu` in the GUI directory if it does not already exist.
 
-3. Run `MHServerEmu.Gui.Avalonia.exe` (Windows) or `MHServerEmu.Gui.Avalonia` (Linux).
+3. Copy or move a build of MHServerEmu to the `MHServerEmu` subdirectory.
+
+4. Run `MHServerEmu.Gui.Avalonia.exe` (Windows) or `MHServerEmu.Gui.Avalonia` (Linux).
 
 ## Building
 
