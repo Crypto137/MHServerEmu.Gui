@@ -1,0 +1,56 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="1024" d:DesignHeight="640"
+        x:Class="MHServerEmu.Gui.Avalonia.Views.CommandWindow"
+        Title="Command"
+        Width="1024" Height="640" MinWidth="1024" MinHeight="640" CanMinimize="False"
+        WindowStartupLocation="CenterOwner">
+
+    <Window.Styles>
+        <Style Selector="Grid">
+			<Setter Property="RowSpacing" Value="8" />
+            <Setter Property="ColumnSpacing" Value="8" />
+        </Style>
+        <Style Selector="Border">
+			<Setter Property="BorderBrush" Value="{DynamicResource ThemeBorderLowColor}" />
+            <Setter Property="BorderThickness" Value="1" />
+            <Setter Property="Padding" Value="16" />
+        </Style>
+		<Style Selector="TextBlock">
+			<Setter Property="FontSize" Value="36" />
+        </Style>
+    </Window.Styles>
+
+    <Grid RowDefinitions="* 60" Margin="24">
+        <Grid ColumnDefinitions="* *" ColumnSpacing="8">
+            <Border Grid.Column="0">
+                <Grid RowDefinitions="auto auto 60 60 60 60">
+                    <TextBlock Grid.Row="0">Server</TextBlock>
+                    <Separator Grid.Row="1" />
+                    <Button Grid.Row="2" x:Name="ServerShutdownButton" Click="ServerShutdownButton_Click">Shutdown</Button>
+                    <Button Grid.Row="3" x:Name="ServerReloadLiveTuningButton" Click="ServerReloadLiveTuningButton_Click">Reload Live Tuning</Button>
+                    <Button Grid.Row="4" x:Name="ServerReloadCatalogButton" Click="ServerReloadCatalogButton_Click" >Reload Store Catalog</Button>
+                    <Button Grid.Row="5" x:Name="ServerBroadcastButton" Click="ServerBroadcastButton_Click">Broadcast</Button>
+                </Grid>
+            </Border>
+            <Border Grid.Column="1" >
+                <Grid RowDefinitions="auto auto 60 60 60 60 60">
+                    <TextBlock Grid.Row="0">Account</TextBlock>
+                    <Separator Grid.Row="1" />
+                    <Button Grid.Row="2" x:Name="AccountCreateButton" Click="AccountCreateButton_Click">Create</Button>
+                    <Button Grid.Row="3" x:Name="AccountChangePasswordButton" Click="AccountChangePasswordButton_Click">Change Password</Button>
+                    <Button Grid.Row="4" x:Name="AccountChangeUserLevelButton" Click="AccountChangeUserLevelButton_Click">Change User Level</Button>
+                    <Button Grid.Row="5" x:Name="AccountBanButton" Click="AccountBanButton_Click">Ban</Button>
+                    <Button Grid.Row="6" x:Name="AccountUnbanButton" Click="AccountUnbanButton_Click">Unban</Button>
+                </Grid>
+            </Border>
+        </Grid>
+        <Grid Grid.Row="1" ColumnDefinitions="* *">
+            <Button Grid.Column="0" x:Name="ManualCommandButton" Click="ManualCommandButton_Click">Manual Command</Button>
+            <Button Grid.Column="1" x:Name="CancelButton" Click="CancelButton_Click" IsCancel="true">Cancel</Button>
+        </Grid>
+    </Grid>
+
+</Window>

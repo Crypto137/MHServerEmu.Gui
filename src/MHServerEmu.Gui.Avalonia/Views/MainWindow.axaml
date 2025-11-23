@@ -1,0 +1,27 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="1024" d:DesignHeight="640"
+        x:Class="MHServerEmu.Gui.Avalonia.Views.MainWindow"
+        Title="MHServerEmu GUI (Avalonia)"
+        Width="1024" Height="640" MinWidth="1024" MinHeight="640"
+        WindowStartupLocation="CenterScreen"
+        Opened="Window_Opened" Closing="Window_Closing">
+
+	<Grid RowDefinitions="auto auto * auto" Margin="24" RowSpacing="8">
+        <Grid Grid.Row="0" ColumnDefinitions="auto * auto">
+		    <TextBlock Grid.Column="0" FontSize="48">MHServerEmu</TextBlock>
+            <TextBlock x:Name="ServerStatusTextBlock" Grid.Column="2" VerticalAlignment="Center">Server Status</TextBlock>
+        </Grid>
+        <Separator Grid.Row="1" Margin="4" />
+        <TextBox x:Name="ServerOutputTextBox" Grid.Row="2" IsReadOnly="True" TextWrapping="NoWrap" FontFamily="Consolas, Courier New, DejaVu Sans Mono, Liberation Mono" FontSize="12"></TextBox>
+        <Grid Grid.Row="3" ColumnDefinitions="* * * *" RowDefinitions="60" ColumnSpacing="8">
+			<Button x:Name="StartStopServerButton" Click="StartStopServerButton_Click" Grid.Column="0">Start Server</Button>
+			<Button x:Name="CommandButton" Click="CommandButton_Click" Grid.Column="1">Command</Button>
+			<Button x:Name="SettingsButton" Click="SettingsButton_Click" Grid.Column="2">Settings</Button>
+		    <Button x:Name="ExitButton" Click="ExitButton_Click" Grid.Column="3">Exit</Button>
+        </Grid>     
+	</Grid>
+
+</Window>

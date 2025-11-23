@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36301.6
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MHServerEmu.Gui.Avalonia", "src\MHServerEmu.Gui.Avalonia\MHServerEmu.Gui.Avalonia.csproj", "{0EFBD3BB-64D5-4421-BBD3-42ED6886DC0C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MHServerEmu.ServerManagement", "src\MHServerEmu.ServerManagement\MHServerEmu.ServerManagement.csproj", "{0DD63557-A137-4801-94F8-066994534E60}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0EFBD3BB-64D5-4421-BBD3-42ED6886DC0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0EFBD3BB-64D5-4421-BBD3-42ED6886DC0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0EFBD3BB-64D5-4421-BBD3-42ED6886DC0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0EFBD3BB-64D5-4421-BBD3-42ED6886DC0C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0DD63557-A137-4801-94F8-066994534E60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DD63557-A137-4801-94F8-066994534E60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DD63557-A137-4801-94F8-066994534E60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DD63557-A137-4801-94F8-066994534E60}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {CB6B2E7D-B095-4CE0-BEE1-DCF9D5214EAB}
+	EndGlobalSection
+EndGlobal
