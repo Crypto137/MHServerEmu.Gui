@@ -20,10 +20,7 @@ namespace MHServerEmu.ServerManagement
 
         public void Load()
         {
-            if (File.Exists(_path) == false)
-                return;
-
-            _iniData = IniParser.ReadFile(_path);
+            _iniData = File.Exists(_path) ? IniParser.ReadFile(_path) : new();
         }
 
         public void Save()
