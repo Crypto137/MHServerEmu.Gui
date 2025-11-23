@@ -8,6 +8,7 @@
     <AvaloniaUseCompiledBindingsByDefault>true</AvaloniaUseCompiledBindingsByDefault>
     <ApplicationIcon>icon.ico</ApplicationIcon>
     <PackageIcon>icon.png</PackageIcon>
+    <VersionPrefix>0.1.0</VersionPrefix>
   </PropertyGroup>
   <ItemGroup>
     <Content Include="icon.ico" />
